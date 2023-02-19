@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Presentador">
+      <UniqueIdentifier>{db8057dd-130f-4f38-adbf-f52930bc0125}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Vista">
+      <UniqueIdentifier>{1f98677c-8551-40b3-bc1d-08ea08824c05}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Vista\Interfaz">
+      <UniqueIdentifier>{89ce6abe-9ccf-4d8b-8da9-3ee08490f7a2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Modelo">
+      <UniqueIdentifier>{0b97cf5e-c344-4f16-bc16-792a73818d09}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Modelo\Tienda">
+      <UniqueIdentifier>{b7a686c6-a558-4331-96b4-981c07872348}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Modelo\Tienda\Prendas">
+      <UniqueIdentifier>{5d43ff0d-e31f-4b00-8d7e-be684ad70a6f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Modelo\Tienda\Prendas\Camisas">
+      <UniqueIdentifier>{1b71a32b-fbf8-4991-a50e-665334aef9c8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Modelo\Tienda\Prendas\Pantalones">
+      <UniqueIdentifier>{14a647df-4934-40f6-8a67-47f7dcec1649}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Modelo\Vendedor">
+      <UniqueIdentifier>{14db42d8-e2c9-4c65-a97e-66588c83c86b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Modelo\Vendedor\Cotizacion">
+      <UniqueIdentifier>{70f46674-a462-4613-a4b8-8a58f2fe3db1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Presentador\CotizacionPresentador">
+      <UniqueIdentifier>{f1ced385-ee64-4426-88c5-9babe889c411}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Presentador\TiendaPresentador">
+      <UniqueIdentifier>{438aca26-54dc-47aa-bbbf-33843e6b89d0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Presentador\VendedorPresentador">
+      <UniqueIdentifier>{26dbf106-dd17-48be-8e7e-47c6bec5d25b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="App">
+      <UniqueIdentifier>{5cb6233d-5074-412e-9e59-4eb8bc515fe5}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Vista.h">
+      <Filter>Vista\Interfaz</Filter>
+    </ClInclude>
+    <ClInclude Include="Cotizacion.h">
+      <Filter>Modelo\Vendedor\Cotizacion</Filter>
+    </ClInclude>
+    <ClInclude Include="Tienda.h">
+      <Filter>Modelo</Filter>
+    </ClInclude>
+    <ClInclude Include="Prendas.h">
+      <Filter>Modelo\Tienda\Prendas</Filter>
+    </ClInclude>
+    <ClInclude Include="Camisas.h">
+      <Filter>Modelo\Tienda\Prendas\Camisas</Filter>
+    </ClInclude>
+    <ClInclude Include="Pantalones.h">
+      <Filter>Modelo\Tienda\Prendas\Pantalones</Filter>
+    </ClInclude>
+    <ClInclude Include="Vendedor.h">
+      <Filter>Modelo\Vendedor</Filter>
+    </ClInclude>
+    <ClInclude Include="TiendaPresentador.h">
+      <Filter>Presentador\TiendaPresentador</Filter>
+    </ClInclude>
+    <ClInclude Include="VendedorPresentador.h">
+      <Filter>Presentador\VendedorPresentador</Filter>
+    </ClInclude>
+    <ClInclude Include="CotizacionPresentador.h">
+      <Filter>Presentador\CotizacionPresentador</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Vista.cpp">
+      <Filter>Vista\Interfaz</Filter>
+    </ClCompile>
+    <ClCompile Include="Cotizacion.cpp">
+      <Filter>Modelo\Vendedor\Cotizacion</Filter>
+    </ClCompile>
+    <ClCompile Include="Tienda.cpp">
+      <Filter>Modelo</Filter>
+    </ClCompile>
+    <ClCompile Include="Prendas.cpp">
+      <Filter>Modelo\Tienda\Prendas</Filter>
+    </ClCompile>
+    <ClCompile Include="Camisas.cpp">
+      <Filter>Modelo\Tienda\Prendas\Camisas</Filter>
+    </ClCompile>
+    <ClCompile Include="Pantalones.cpp">
+      <Filter>Modelo\Tienda\Prendas\Pantalones</Filter>
+    </ClCompile>
+    <ClCompile Include="Vendedor.cpp">
+      <Filter>Modelo\Vendedor</Filter>
+    </ClCompile>
+    <ClCompile Include="VendedorPresentador.cpp">
+      <Filter>Presentador\VendedorPresentador</Filter>
+    </ClCompile>
+    <ClCompile Include="CotizacionPresentador.cpp">
+      <Filter>Presentador\CotizacionPresentador</Filter>
+    </ClCompile>
+    <ClCompile Include="TiendaPresentador.cpp">
+      <Filter>Presentador\TiendaPresentador</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>App</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
