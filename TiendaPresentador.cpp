@@ -11,7 +11,7 @@ using namespace std;
 
 TiendaPresentador::TiendaPresentador() {
     products = initializeProducts();
-    this->tienda = new Tienda("Cabildo Style", "Cabildo 365", products);
+    this->tienda = new Tienda("Recoleta Fashion", "Santa Fe 2500", products);
 }
 
 list<Prenda*> TiendaPresentador::initializeProducts() {

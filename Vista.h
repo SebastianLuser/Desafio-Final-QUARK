@@ -6,7 +6,6 @@
 #include "VendedorPresentador.h"
 #include "Tienda.h"
 #include <string>
-#include "IView.h"
 
 using namespace std;
 
