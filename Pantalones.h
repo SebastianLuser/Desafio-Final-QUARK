@@ -10,7 +10,7 @@ public:
 	bool Corte();
 	double calcularPrecio() override;
 private:
-	bool corte = false ;
+	bool corte ;
 };
 
 #endif#
