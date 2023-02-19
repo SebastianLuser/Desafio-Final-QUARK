@@ -15,23 +15,36 @@ CotizacionPresentador::CotizacionPresentador() {
 }
 
 double CotizacionPresentador::crearCotizacion(Tienda* tienda, Vendedor* vendedor, bool tipoCorte, bool tipoRopa, bool tipoManga, bool tipoCuello, bool calidad, double precio, int cantidad) {
-    Prenda* producto;
+    Prenda* producto = nullptr;
     if (tipoRopa) {
-         producto = tienda->getPrenda( tipoRopa, tipoManga, tipoCuello, calidad);
+        if (tienda->getStock(tipoRopa, tipoManga, tipoCuello, calidad) >= cantidad) {
+            producto = tienda->getPrenda( tipoRopa, tipoManga, tipoCuello, calidad);
+        }
+        else {
+            cout << "---No hay suficiente Stock---" << endl;
+        }
      }
     else {
-        producto = tienda->getPrenda(tipoCorte, tipoRopa, calidad);
+        if (tienda->getStock(tipoCorte, tipoRopa, calidad) >= cantidad) {
+            producto = tienda->getPrenda(tipoCorte, tipoRopa, calidad);
+        }
+        else{
+            cout << "---No hay suficiente Stock---" << endl;
+        }
+    }
+    if (producto != nullptr) {
+        producto->setPrecio(precio);
+        double resultado = producto->calcularPrecio() * cantidad;
+        time_t now = std::time(nullptr);
+        Cotizacion* cotizacion = new Cotizacion(this->cotizaciones.size()  ,now, vendedor->CodVendedor(), cantidad, resultado, producto);
+        cotizaciones.push_back(cotizacion);
+        return resultado;
+    }
+    else {
+        return 0;
     }
      
 
-     producto->setPrecio(precio);
-     
-    double resultado = producto->calcularPrecio() * cantidad;
-    time_t now = std::time(nullptr);
-    Cotizacion* cotizacion = new Cotizacion(this->cotizaciones.size()  ,now, vendedor->CodVendedor(), cantidad, resultado, producto);
-    cotizaciones.push_back(cotizacion);
-
-    return resultado;
 }
 
 

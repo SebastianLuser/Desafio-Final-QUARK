@@ -14,6 +14,8 @@ public:
 	const char* Direccion();
 	Prenda* getPrenda(bool tipoRopa, bool tipoCuello, bool tipoManga, bool tipoCalidad)  ;
 	Prenda* getPrenda(bool tipoCorte, bool tipoRopa, bool tipoCalidad);
+	int getStock(bool tipoRopa, bool tipoCuello, bool tipoManga, bool tipoCalidad);
+	int getStock(bool tipoCorte, bool tipoRopa, bool tipoCalidad);
 private:
 	const char* nombre;
 	const char* direccion;

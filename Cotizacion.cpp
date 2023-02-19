@@ -78,7 +78,7 @@ const char* Cotizacion::Imprimir() {
         + s4 + to_string(this->Id()) + s3 
         + s5 + this->CodVendedor() + s3 
         + s6 /*+ this->HoraActual()*/ +  s3
-        + s7 + producto +  s2 + especificaciones
+        + s7 + producto +  s2 + especificaciones + s3
         + s8 + to_string(this->CantidadProductos()) + s3
         + s9 + to_string(this->Resultado()) + s3;
 

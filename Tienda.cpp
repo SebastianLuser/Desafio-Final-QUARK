@@ -66,3 +66,49 @@ Prenda* Tienda::getPrenda(bool tipoCorte, bool tipoRopa, bool tipoCalidad) {
     return _producto;
 
 }
+
+
+
+int Tienda::getStock(bool tipoCorte, bool tipoRopa, bool tipoCalidad) {
+
+    int _producto = 0;
+
+    if (Productos().empty()) {
+        return _producto;
+    }
+    for (Prenda* prod : Productos()) {
+
+        if (dynamic_cast<Pantalon*>(prod)) {
+            Pantalon* pantalon = dynamic_cast<Pantalon*>(prod);
+            if (pantalon->Corte() == tipoCorte && pantalon->Calidad() == tipoCalidad) {
+                _producto = pantalon->Stock();
+            }
+        }
+    }
+    return _producto;
+
+}
+
+
+int Tienda::getStock(bool tipoRopa, bool tipoCuello, bool tipoManga, bool tipoCalidad) {
+
+    int _producto = 0;
+
+    if (Productos().empty()) {
+        return _producto;
+    }
+    for (Prenda* prod : Productos()) {
+
+
+        if (dynamic_cast<Camisa*>(prod)) {
+            Camisa* camisa = dynamic_cast<Camisa*>(prod);
+
+            if (camisa->Manga() == tipoManga && camisa->Cuello() == tipoCuello && camisa->Calidad() == tipoCalidad) {
+                _producto = camisa->Stock();
+            }
+        }
+    }
+
+    return _producto;
+
+}

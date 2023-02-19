@@ -5,6 +5,8 @@
 #include "CotizacionPresentador.h"
 #include "VendedorPresentador.h"
 #include "Tienda.h"
+#include <string>
+#include "IView.h"
 
 using namespace std;
 
@@ -23,13 +25,15 @@ public:
 	void menuCalidad();
 	void menuPrecio();
 	void menuCantidad();
+	void MostrarTexto(const char* text);
 	virtual ~Vista();
-	void Cotizar(bool tipoCorte,bool tipoRopa, bool tipoManga,bool  tipoCuello, bool calidad,double precio,int cantidad);
+	double Cotizar(bool tipoCorte,bool tipoRopa, bool tipoManga,bool  tipoCuello, bool calidad,double precio,int cantidad);
+
+
+private:
 	TiendaPresentador* tiendaPresentador;
 	CotizacionPresentador* cotizacionPresentador;
 	VendedorPresentador* vendedorPresentador;
-
-private:
 	const char* nombreVendedorLabel;
 	const char* apellidoVendedorLabel;
 	const char* codVendedorLabel;
